@@ -9,9 +9,9 @@ import logging
 
 app = Flask(__name__)
 
-@app.route('/healthz', methods=['GET'])
+@app.route('/', methods=['GET'])
 def healthz():
-    message = {"status": "Aal is well!!!"}
+    message = {"status": "All is well!!!"}
     response = jsonify(message)
     response.status_code = 200
     return response
